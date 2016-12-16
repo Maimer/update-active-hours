@@ -7,9 +7,12 @@ Windows 10 Home does not allow users to shut off forced reboots that are caused 
 The first script `active_hours_scheduled_task.ps1` is used to create the scheduled task. The task itself runs the `update_active_hours.ps1` script when the task is executed.
 
 The script has 3 possible parameters:
-...-taskName          The name of the scheduled task (Default: Update Active Hours)
-...-scriptLocation    The location of the script to schedule (Default: C:\update_active_hours.ps1)
-...-deleteTask        Flag to delete the named scheduled task
+
+&nbsp;&nbsp;-taskName          The name of the scheduled task (Default: Update Active Hours)
+
+&nbsp;&nbsp;-scriptLocation    The location of the script to schedule (Default: C:\update_active_hours.ps1)
+
+&nbsp;&nbsp;-deleteTask        Flag to delete the named scheduled task
 
 If the `update_active_hours.ps1` file is put into a custom location then the `-scriptLocation` parameter must be passed with the location of the script.
 
