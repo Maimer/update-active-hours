@@ -30,6 +30,8 @@ if ($help) {
 if (!$taskName) {
   $taskName = $TASK_NAME
   Write-Output "Using Default Task Name: $taskName"
+} else {
+  Write-Output "Using Task Name: $taskName"
 }
 
 if (!$scriptLocation) {
@@ -40,6 +42,7 @@ if (!$scriptLocation) {
     Write-Output "Unable to locate script at ${DEFAULT_LOCATION}"
     Write-Output "Please move script to that location or specify location with -scriptLocation parameter."
     GetHelp
+    Exit 0
   }
 } else {
   Write-Output "Using script in location: ${scriptLocation}"
