@@ -4,7 +4,7 @@ if (Test-Path -Path "${registryPath}") {
   $currentHour = (Get-Date).hour
   $activeHoursStart = $currentHour
   $activeHoursEnd = $activeHoursStart + 12
-  if ($activeHoursEnd -gt 24) {
+  if ($activeHoursEnd -gt 23) {
     $activeHoursEnd = $activeHoursEnd - 24
   }
   Set-ItemProperty -Path "${registryPath}" -Name "ActiveHoursStart" -Value "${activeHoursStart}"
